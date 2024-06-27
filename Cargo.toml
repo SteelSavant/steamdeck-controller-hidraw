@@ -1,0 +1,11 @@
+[package]
+name = "steamdeck-controller-hidraw"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bitflags = {version="^2.6.0", features=["bytemuck"] }
+bytemuck = {version="^1.16.1", features=["derive"] }
+hidraw = "^0.0.7"
+mio = {version="^1.0.0", features=["os-poll", "os-ext"]}
+rand = "0.8.5"
