@@ -82,34 +82,34 @@ bitflags! {
     #[repr(transparent)]
     #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash,  Pod, Zeroable)]
     pub struct SteamDeckGamepadButton: u32 {
-        const R1 = 1;
-        const R2 = 1 << 1;
-        const L1 = 1 << 2;
-        const L2 = 1 << 3;
-        const NORTH = 1 << 4;
-        const EAST = 1 << 5;
-        const WEST = 1 << 6;
-        const SOUTH = 1 << 7;
-        const DPAD_UP = 1 << 8;
-        const DPAD_RIGHT = 1 << 9;
-        const DPAD_LEFT = 1 << 10;
-        const DPAD_DOWN = 1 << 11;
-        const START = 1 << 12;
-        const SELECT = 1 << 13;
-        const RSTICK = 1 << 14;
-        const LSTICK = 1 << 15;
-        const STEAM = 1 << 16;
-        const QAM = 1 << 17;
-        const R4 = 1 << 18;
-        const R5 = 1 << 19;
-        const L4 = 1 << 20;
-        const L5 = 1 << 21;
-        const RSTICK_TOUCH = 1 << 22;
-        const LSTICK_TOUCH = 1 << 23;
-        const LPAD = 1 << 24;
-        const RPAD = 1 << 25;
-        const LPAD_TOUCH = 1 << 26;
-        const RPAD_TOUCH = 1 << 27;
+        const STEAM = 1;
+        const QAM = 1 << 1;
+        const START = 1 << 2;
+        const SELECT = 1 << 3;
+        const R1 = 1 << 4;
+        const R2 = 1 << 5;
+        const L1 = 1 << 6;
+        const L2 = 1 << 7;
+        const NORTH = 1 << 8;
+        const SOUTH = 1 << 9;
+        const EAST = 1 << 10;
+        const WEST = 1 << 11;
+        const DPAD_UP = 1 << 12;
+        const DPAD_DOWN = 1 << 13;
+        const DPAD_LEFT = 1 << 14;
+        const DPAD_RIGHT = 1 << 15;
+        const RSTICK = 1 << 16;
+        const RSTICK_TOUCH = 1 << 17;
+        const LSTICK = 1 << 18;
+        const LSTICK_TOUCH = 1 << 19;
+        const RPAD = 1 << 20;
+        const RPAD_TOUCH = 1 << 21;
+        const LPAD = 1 << 22;
+        const LPAD_TOUCH = 1 << 23;
+        const R4 = 1 << 24;
+        const R5 = 1 << 25;
+        const L4 = 1 << 26;
+        const L5 = 1 << 27;
     }
 }
 
