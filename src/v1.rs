@@ -43,28 +43,12 @@ impl SteamDeckDeviceInterface for SteamDeckInterface {
         if report[2] == 9 {
             // handle input
 
-            if let Some(flags) = ButtonFlags8::from_bits(report[8]) {
-                map8(flags, &mut out);
-            }
-            if let Some(flags) = ButtonFlags9::from_bits(report[9]) {
-                map9(flags, &mut out);
-            }
-
-            if let Some(flags) = ButtonFlags10::from_bits(report[10]) {
-                map10(flags, &mut out);
-            }
-
-            if let Some(flags) = ButtonFlags11::from_bits(report[11]) {
-                map11(flags, &mut out);
-            }
-
-            if let Some(flags) = ButtonFlags13::from_bits(report[13]) {
-                map13(flags, &mut out);
-            }
-
-            if let Some(flags) = ButtonFlags14::from_bits(report[14]) {
-                map14(flags, &mut out);
-            }
+            map8(ButtonFlags8::from_bits_retain(report[8]), &mut out);
+            map9(ButtonFlags9::from_bits_retain(report[9]), &mut out);
+            map10(ButtonFlags10::from_bits_retain(report[10]), &mut out);
+            map11(ButtonFlags11::from_bits_retain(report[11]), &mut out);
+            map13(ButtonFlags13::from_bits_retain(report[13]), &mut out);
+            map14(ButtonFlags14::from_bits_retain(report[14]), &mut out);
         }
 
         out
